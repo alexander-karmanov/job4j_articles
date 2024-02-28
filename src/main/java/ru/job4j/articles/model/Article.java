@@ -35,8 +35,12 @@ public class Article {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Article article = (Article) o;
         return id == article.id && text.equals(article.text);
     }
@@ -48,9 +52,9 @@ public class Article {
 
     @Override
     public String toString() {
-        return "Article{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
-                '}';
+        return "Article{"
+                + "id=" + id
+                + ", text='" + text + '\''
+                + '}';
     }
 }

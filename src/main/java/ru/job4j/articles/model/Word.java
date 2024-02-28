@@ -31,8 +31,12 @@ public class Word {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Word word = (Word) o;
         return id == word.id && Objects.equals(value, word.value);
     }
@@ -44,9 +48,9 @@ public class Word {
 
     @Override
     public String toString() {
-        return "Word{" +
-                "id=" + id +
-                ", value='" + value + '\'' +
-                '}';
+        return "Word{"
+                + "id=" + id
+                + ", value='" + value + '\''
+                + '}';
     }
 }
